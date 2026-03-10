@@ -10,5 +10,5 @@ int main(void)
     int *p = &n;
 
     // TODO: Print the value of n by dereferencing p (use *p)
-    printf("%i\n", /* ??? */);
+    printf("%i\n", p);
 }
