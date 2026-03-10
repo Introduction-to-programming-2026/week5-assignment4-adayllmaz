@@ -9,8 +9,8 @@ int main(void)
     int n = 50;
 
     // TODO: Declare a pointer p that stores the address of n
-    int *p = /* ??? */;
+    int *p = &n;
 
     // TODO: Print the address stored in p using %p
-    printf("%p\n", /* ??? */);
+    printf("%p\n", p);
 }
