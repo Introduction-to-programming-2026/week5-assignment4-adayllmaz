@@ -3,7 +3,10 @@
 // Run this. Does x and y actually swap in main?
 //
 // TODO: Explain below why the swap doesn't work:
-// ANSWER: ...
+// ANSWER: The swap does not work because the function receives copies
+// of x and y, not the original variables. Changing a and b inside the
+// function only changes the copies, so the values of x and y in main
+// remain the same.
 //
 // Hint: When you call swap(x, y), does the function receive x and y
 //       themselves, or copies of their values?
