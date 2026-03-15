@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     }
 
     // TODO: Open argv[1] for reading in binary mode "rb"
-    FILE *src = fopen(/* ??? */, /* ??? */);
+    FILE *src = fopen(argv[1], "rb");
     if (src == NULL)
     {
         printf("Could not open source file.\n");
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     }
 
     // TODO: Open argv[2] for writing in binary mode "wb"
-    FILE *dst = fopen(/* ??? */, /* ??? */);
+    FILE *dst = fopen(argv[2], "wb");
     if (dst == NULL)
     {
         printf("Could not open destination file.\n");
@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
 
     // TODO: Loop — read one BYTE from src, write it to dst, until src is empty
     // Hint: fread returns the number of items read; stop when it returns 0
-    while (fread(/* ??? */, sizeof(b), 1, src) != 0)
+    while (fread(&b, sizeof(b), 1, src) != 0)
     {
-        fwrite(/* ??? */, sizeof(b), 1, dst);
+        fwrite(&b, sizeof(b), 1, dst);
     }
 
     // TODO: Close both files
-    /* ??? */
-    /* ??? */
+    fclose(src);
+    fclose(dst);
 
     return 0;
 }
